@@ -1,0 +1,259 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+
+/* ===== グローバルスタイル ===== */
+body {
+  font-family: "Noto Serif JP", serif;
+  line-height: 1.8;
+  color: #343a40; /* Dark gray for calm and professional feel */
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+/* カスタムプライマリーカラーの定義 (Bootstrapのprimaryを上書き) */
+:root {
+  --bs-primary: #4a6c6f; /* 深い緑がかった青 - 安心感と落ち着き */
+  --bs-primary-rgb: 74, 108, 111;
+}
+
+.text-primary {
+  color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.list-group-item {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.list-group-item.active {
+  background-color: transparent !important;
+  color: var(--bs-primary) !important;
+  border-left: 3px solid var(--bs-primary) !important;
+  border-radius: 0 !important;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3a5c5f;
+  --bs-btn-hover-border-color: #3a5c5f;
+  --bs-btn-focus-shadow-rgb: 74, 108, 111;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #305052;
+  --bs-btn-active-border-color: #305052;
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+/* ===== 見出しスタイル ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Serif JP", serif; /* すべての見出しに教科書体 */
+  font-weight: 700;
+  color: var(--bs-primary); /* プライマリーカラーで見出しを強調 */
+}
+
+/* セクション見出し */
+.section-title {
+  font-size: 1.8rem;
+  border-left: 5px solid var(--bs-primary); /* プライマリーカラーのボーダー */
+  padding-left: 15px;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== フォームスタイル ===== */
+/* フォームグループ：項目と入力ボックスの間隔を拡大 */
+.form-group {
+  margin-bottom: 2rem; /* デフォルトの1.5remから拡大 */
+}
+
+/* フォームラベルの見た目 */
+.form-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 0.75rem; /* ラベルと入力ボックスの間隔 */
+  display: block;
+}
+
+/* 入力ボックスのスタイル */
+.form-control,
+.form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-family: "Noto Serif JP", serif;
+  color: #343a40;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(74, 108, 111, 0.25);
+}
+
+/* 大きいサイズの入力ボックス */
+.form-control-lg,
+.form-select-lg {
+  padding: 0.75rem 1rem;
+  font-size: 1.05rem;
+  border-radius: 0.375rem;
+}
+
+/* プライバシーポリシー・利用規約同意セクション */
+.agreement-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-left: 4px solid var(--bs-primary);
+  border-radius: 0.25rem;
+}
+
+/* チェックボックス */
+.agreement-section .form-check {
+  margin-bottom: 1.5rem;
+}
+
+/* チェックボックスラベル */
+.agreement-section .form-check-label {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-left: 0.5rem;
+}
+
+/* リンクのスタイル */
+.agreement-section a,
+.form-check-label a {
+  color: var(--bs-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* リンクホバー */
+.agreement-section a:hover,
+.form-check-label a:hover {
+  text-decoration: underline;
+  color: #3a5c5f;
+}
+
+/* 注意書きアラート */
+.alert-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 0.375rem;
+  color: #333;
+}
+
+.alert-warning ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.alert-warning ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* サイドバーのスタイル調整 */
+.sidebar {
+  position: sticky;
+  top: 20px;
+  padding: 2rem; /* Bootstrapのp-4を上書きして調整 */
+  background-color: #ffffff; /* 白背景 */
+  border: 1px solid #e9ecef; /* Subtle border */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Soft shadow */
+}
+
+.sidebar-box {
+  background-color: transparent; /* 背景色は親のsidebarに任せる */
+  border-left: none; /* カスタムボーダーは不要 */
+  padding: 0; /* 親のpaddingに任せる */
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-family: "Noto Serif JP", serif;
+  margin-bottom: 1rem;
+  color: var(--bs-primary); /* プライマリーカラー */
+  border-bottom: 1px solid #e9ecef; /* Subtle separator */
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-text {
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: #5a5a5a; /* Slightly lighter gray for body text */
+}
+
+/* フッターの調整 */
+footer {
+  background-color: var(
+    --bs-primary
+  ) !important; /* プライマリーカラーのフッター */
+  color: white !important;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 992px) {
+  .sidebar {
+    position: relative;
+    top: auto;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .sidebar-box {
+    margin-bottom: 1.5rem;
+  }
+
+  /* モバイル時のフォーム調整 */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    font-size: 0.95rem;
+  }
+
+  .agreement-section {
+    padding: 1rem;
+  }
+}
+
+/* ===== 視認性改善 ===== */
+body {
+  color: #2c3e50;  /* #343a40 から濃くする */
+  font-size: 1.05rem;  /* ほんの少し大きく */
+}
+
+section p {
+  color: #2c3e50;  /* テキストを濃くする */
+  font-weight: 500;  /* ほんの少し太くする */
+  line-height: 1.9;  /* 行間を広げる */
+}
+
+h2, h3, h4 {
+  font-weight: 700;  /* より太く */
+  color: #1a3a3d;  /* プライマリーより濃くする */
+}
