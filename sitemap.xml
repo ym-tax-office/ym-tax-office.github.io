@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ym-tax-office.github.io/</loc>
+    <lastmod>2026-03-08T06:00:32+00:00</lastmod>
+  </url><url>
+    <loc>https://ym-tax-office.github.io/posts/tax-thinking-engine/</loc>
+    <lastmod>2026-03-08T06:00:32+00:00</lastmod>
+  </url><url>
     <loc>https://ym-tax-office.github.io/about/</loc>
     <lastmod>2026-02-15T05:49:18+00:00</lastmod>
-  </url><url>
-    <loc>https://ym-tax-office.github.io/</loc>
   </url><url>
     <loc>https://ym-tax-office.github.io/categories/</loc>
   </url><url>
@@ -15,7 +19,10 @@
     <lastmod>2026-02-15T01:59:32+00:00</lastmod>
   </url><url>
     <loc>https://ym-tax-office.github.io/privacy/</loc>
-    <lastmod>2026-02-15T23:48:11+00:00</lastmod>
+    <lastmod>2026-03-08T05:39:54+00:00</lastmod>
+  </url><url>
+    <loc>https://ym-tax-office.github.io/posts/</loc>
+    <lastmod>2026-03-07T16:19:43+00:00</lastmod>
   </url><url>
     <loc>https://ym-tax-office.github.io/terms-tax/</loc>
     <lastmod>2026-02-16T01:39:47+00:00</lastmod>
