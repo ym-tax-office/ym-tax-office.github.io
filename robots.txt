@@ -1,2 +1,4 @@
 User-agent: *
+Allow: /tax-thinking-engine/
+Allow: /contact-peer/
 Disallow: /
