@@ -109,6 +109,16 @@
           this.setCustomValidity('');
         }
       }
+      // メールアドレス形式チェック
+      if (type === 'email') {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (value !== '' && !emailPattern.test(value)) {
+          this.setCustomValidity('メールアドレスの形式が正しくないようです（例: example@gmail.com）');
+          this.reportValidity();
+        } else {
+          this.setCustomValidity('');
+        }
+      }
 
       this.value = value;
     });
@@ -131,24 +141,17 @@
       return;
     }
 
-    // 2. メールアドレスの追加チェック（ドット必須）
-    const emailInput = form.querySelector('input[name="user_email"]');
-    if (emailInput && !emailInput.value.includes('.')) {
-      alert('メールアドレスにはドメイン（.jp や .com など）が必要です。');
-      return;
-    }
-
-    // 3. ボタンを送信中状態に変更(二重送信を防止)
+    // 2. ボタンを送信中状態に変更(二重送信を防止)
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.innerText = '送信中...';
     }
 
-    // 4. FormData を準備(フォーム内の全てのデータを集めて、送信用に整理するオブジェクト)
+    // 3. FormData を準備(フォーム内の全てのデータを集めて、送信用に整理するオブジェクト)
     // {key,pair}でデータを格納。keyはinputのname属性、pairはユーザーが入力した値。
     const formData = new FormData(form);
 
-    // 5. Turnstile トークンが見つかったらcf-turnstile-responseというkeyでFormDataに追加(GAS側でボット判定するために必要。)
+    // 4. Turnstile トークンが見つかったらcf-turnstile-responseというkeyでFormDataに追加(GAS側でボット判定するために必要。)
     const turnstileRes = document.querySelector('[name=cf-turnstile-response]');
     if (!turnstileRes || !turnstileRes.value) {
       alert('認証確認に失敗しました。もう一度お試しください。');
@@ -159,10 +162,10 @@
       return;
     }
 
-    // 6. GASのURLを取得（ここで1回だけ宣言！）
+    // 5. GASのURLを取得（ここで1回だけ宣言！）
     const gasUrl = form.getAttribute('data-gas-url');
 
-    // 7. GAS へ送信
+    // 6. GAS へ送信
     if (!gasUrl) {
       console.error('GAS URL が設定されていません');
       alert('システムエラーが発生しました。管理者にお問い合わせください。');

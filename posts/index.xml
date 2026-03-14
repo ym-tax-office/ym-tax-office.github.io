@@ -3,14 +3,18 @@
   <channel>
     <title>ブログ on ${HUGO_PARAMS_OFFICENAME}</title>
     <link>https://ym-tax-office.github.io/posts/</link>
-    <description>Recent content in ブログ on ${HUGO_PARAMS_OFFICENAME}</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="https://ym-tax-office.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content on ${HUGO_PARAMS_OFFICENAME}</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    
+    
+      <atom:link href="https://ym-tax-office.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>税務思考エンジンを作っています</title>
       <link>https://ym-tax-office.github.io/posts/tax-thinking-engine/</link>
       <pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate>
-      
       <guid>https://ym-tax-office.github.io/posts/tax-thinking-engine/</guid>
       <description>AIを単なる回答ツールではなく、税務の思考プロセスを持つエンジンとして育てる試みについて。</description>
     </item>
