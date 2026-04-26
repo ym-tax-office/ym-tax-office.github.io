@@ -105,8 +105,15 @@
           <p class="mb-2" style="color: #0f5132 !important;">こちらは、税務相談専用のお問い合わせフォームです。</p>
           <hr>
           <ul class="mb-0">
-            <li>税務相談以外のお問い合わせには対応できません。</li>
-            <li>税務相談は有料です（30分 5,000円税別）。</li>
+            <li>こちらのフォームは税務相談専用となります。税務相談以外のお問い合わせには対応できません。</li>
+            <li>相談時間は、30分〜120分となります。</li>
+            <li>ご相談はご予約いただいた時間で終了とさせていただきます。</li>
+            <li>事実関係の整理を中心に、論点や今後の対応の方向性を一緒に確認します。</li>
+            <li>無理に結論を出すのではなく、一緒に考える時間としてご利用いただければと思います。</li>
+            <li>ご相談は30分単位で承ります（1枠 5,000円税別）。</li>
+            <li>事前にご希望時間（30分/60分/90分/120分）をお選びください。</li>
+            <li>継続してのご相談をご希望の方は、別途日程を改めてご予約をお願いいたします。</li>
+            <li>初回相談後、税務申告をご希望の場合は、別途書面でのご契約となります。</li>
             <li>対面（Zoom等のオンラインを含む）でのご相談となります。</li>
             <li>録画・録音、AI等による文字起こしはご遠慮ください。</li>
             <li>お支払いは銀行振込（前払い）となります。振込先は別途お知らせいたします。</li>
@@ -164,6 +171,18 @@
             <label class="form-label fw-bold">ご希望の相談日時（第二希望）</label>
             <input type="datetime-local" name="preferred_date_2" class="form-control form-control-lg" />
           </div>
+          
+          
+          <div class="form-group mb-4">
+            <label class="form-label fw-bold">ご希望の相談時間 <span class="badge bg-danger">必須</span></label>
+            <select name="consultation_time" class="form-select form-select-lg" required>
+              <option value="" disabled selected>選択してください</option>
+              <option value="30">30分（5,000円 税別）</option>
+              <option value="60">60分（10,000円 税別）</option>
+              <option value="90">90分（15,000円 税別）</option>
+              <option value="120">120分（20,000円 税別）</option>
+            </select>
+          </div>
 
           
           <div class="form-group mb-4">
@@ -179,7 +198,7 @@
           </div>
 
           
-          <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAACZ_OYdkCCXubDGh" data-theme="light"></div>
+          <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAADD4L7bm197wOun9" data-theme="light"></div>
 
           
           <div class="agreement-section mb-5 bg-light p-4 rounded border-start border-primary border-4">
