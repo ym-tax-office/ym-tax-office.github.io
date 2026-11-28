@@ -1,6 +1,6 @@
 /**
  * Contact Form Common Script
- * 同業先生との意見交換フォーム・税務相談フォーム用の共通JavaScriptロジック
+ * 税務相談・意見交換・個人情報の請求フォーム用の共通JavaScriptロジック
  */
 
 // LIFE（）即実行関数：（）で囲まれた関数をページ読み込みと同時に即座に実行。
@@ -69,7 +69,7 @@
       setupFieldConversion(taxRegInput, 'default');
     }
 
-    // メールアドレスフィールド（両フォーム）
+    // メールアドレスフィールド（全フォーム）
     const emailInput = form.querySelector('input[name="user_email"]');
     if (emailInput) {
       setupFieldConversion(emailInput, 'email');
