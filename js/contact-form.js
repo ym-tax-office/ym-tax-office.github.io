@@ -42,15 +42,17 @@
     const termsCheck = document.getElementById('termsCheck');
     const submitBtn = document.getElementById('submit-btn');
 
-    if (!privacyCheck || !termsCheck || !submitBtn) return;
+    if (!privacyCheck || !submitBtn) return;
+
+    // 利用規約のないフォームは、ポリシーの同意だけで判定
+    const checks = [privacyCheck, termsCheck].filter(Boolean);
 
     // 送信ボタン有効化制御関数
     const updateSubmitButton = () => {
-      submitBtn.disabled = !(privacyCheck.checked && termsCheck.checked);
+      submitBtn.disabled = !checks.every(c => c.checked);
     };
     // changeイベント：ユーザーがチェックボックスの状態を変更したときに発動
-    privacyCheck.addEventListener('change', updateSubmitButton);
-    termsCheck.addEventListener('change', updateSubmitButton);
+    checks.forEach(c => c.addEventListener('change', updateSubmitButton));
 
     // 初期状態をセット
     updateSubmitButton();
